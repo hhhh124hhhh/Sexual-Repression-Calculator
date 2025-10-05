@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI助手按钮测试</title>
+    <style>
+        .ai-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background-color: #8A2BE2;
+            color: white;
+            border: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            transition: transform 0.2s;
+        }
+        
+        .ai-button:hover {
+            transform: scale(1.05);
+        }
+        
+        .ai-icon {
+            width: 24px;
+            height: 24px;
+        }
+        
+        .ai-text {
+            font-size: 12px;
+            margin-top: 2px;
+        }
+    </style>
+</head>
+<body>
+    <h1>AI助手按钮测试</h1>
+    <p>在这个页面上，您应该能看到右下角的AI助手按钮。</p>
+    <p>如果看不到，请检查浏览器控制台是否有错误信息。</p>
+    
+    <!-- AI助手按钮 -->
+    <button class="ai-button">
+        <svg class="ai-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z" fill="white"/>
+            <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z" fill="white"/>
+        </svg>
+        <span class="ai-text">AI</span>
+    </button>
+</body>
+</html>

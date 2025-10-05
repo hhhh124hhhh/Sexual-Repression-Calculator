@@ -8,6 +8,7 @@ import {Link} from 'react-router-dom';
 import {Card, CardContent, CardHeader, CardTitle} from '@/components/ui/card';
 import {Button} from '@/components/ui/button';
 import {Badge} from '@/components/ui/badge';
+import { CopilotKit } from '@copilotkit/react-core';
 import {
     ArrowRight,
     BarChart3,
@@ -25,6 +26,7 @@ import {
 } from 'lucide-react';
 
 export default function Home() {
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-psychology-calm via-white to-psychology-warm">
       {/* 背景装饰 */}

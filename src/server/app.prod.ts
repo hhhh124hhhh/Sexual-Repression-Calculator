@@ -4,14 +4,14 @@ import {setupRoutes} from "./routes";
 
 const app = new Hono();
 
-const presevePaths = ["/static", "/favicon.svg", "/api"];
+const preservePaths = ["/static", "/favicon.svg", "/api"];
 
 app.use(
   "*",
   serveStatic({
     root: `web`,
     rewriteRequestPath(path) {
-      if (presevePaths.some((p) => path.startsWith(p))) {
+      if (preservePaths.some((p) => path.startsWith(p))) {
         return path;
       }
       return "/";

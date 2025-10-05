@@ -27,6 +27,8 @@ import {AssessmentSession, SRI_LEVELS} from '@/types';
 import {diagnoseStorage, downloadAsJSON, getAssessmentSession} from '@/lib/storage';
 import {ALL_SCALES} from '@/lib/scales';
 import {ShareButtonMobile, ShareResult, SocialShareFloating} from '@/components/common';
+import {AIAssistant} from '@/components/common'; // 添加AI助手导入
+import { CopilotKit } from '@copilotkit/react-core'; // 添加CopilotKit导入
 import {useIsMobile} from '@/hooks/use-mobile';
 import {decodeShareData} from '@/lib/share-utils';
 
@@ -620,6 +622,11 @@ export default function Results() {
       {isMobile && !isShared && (
         <SocialShareFloating session={session} />
       )}
+
+      {/* AI助手组件 - 始终显示 */}
+      <CopilotKit runtimeUrl="/api/copilotkit">
+        <AIAssistant results={session?.results} />
+      </CopilotKit>
     </div>
   );
 }
